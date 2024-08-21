@@ -25,10 +25,10 @@ namespace WeatherForecast.Controllers{
            if (response.IsSuccessStatusCode){
                 
             var data = await response.Content.ReadAsStringAsync();
-            _logger.LogInformation("Dati ricevuti: {data}", data);
+            //_logger.LogInformation("Dati ricevuti: {data}", data);
             
             var deserialized = JsonSerializer.Deserialize<TrentinoLocations>(data, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
-            _logger.LogInformation("Dati deserializzati: {deserialized}", deserialized);
+            //_logger.LogInformation("Dati deserializzati: {deserialized}", deserialized);
 
             return View(deserialized);
            }

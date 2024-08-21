@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WsSoapTranslator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+600ea5b2292c1a32f919542f403ede2f98706d8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("WsSoapTranslator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WsSoapTranslator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

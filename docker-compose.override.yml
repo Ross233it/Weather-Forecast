@@ -1,16 +1,15 @@
 services:
   weatherforecast:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTPS_PORTS=1115  
-      - ASPNETCORE_HTTP_PORTS=1116   
-      - ASPNETCORE_URLS=https://+:1115;http://+:1116 
-    ports:       
-        - "1115:443"    
+      - ASPNETCORE_ENVIRONMENT=Development     
+      - ASPNETCORE_HTTP_PORTS=80  
+      - ASPNETCORE_URLS=http://+:80
+    ports:               
         - "1116:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
   wssoaptranslator:
     image: ${DOCKER_REGISTRY-}wssoaptranslator
     environment:

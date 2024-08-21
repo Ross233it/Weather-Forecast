@@ -1,52 +1,39 @@
 {
-  "profiles": {
-    "http": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:80"
-    },
-    "https": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:443;http://localhost:80"
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "Container (Dockerfile)": {
-        "commandName": "Docker",
-        "launchBrowser": true,
-        "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-        "environmentVariables": {
-            "ASPNETCORE_HTTPS_PORTS":"443",
-            "ASPNETCORE_HTTP_PORTS": "80"
+    "profiles": {
+        "http": {
+            "commandName": "Project",
+            "launchBrowser": true,
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "dotnetRunMessages": true,
+            "applicationUrl": "http://localhost:1116"
         },
-        "publishAllPorts": true,
-        "useSSL": true
-
+        "IIS Express": {
+            "commandName": "IISExpress",
+            "launchBrowser": true,
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sslPort": 44306
+        },
+        "Container (Dockerfile)": {
+            "commandName": "Docker",
+            "launchBrowser": true,
+            "launchUrl": "http://{ServiceHost}:{ServicePort}",
+            "environmentVariables": {                
+                "ASPNETCORE_HTTP_PORT": "1116"
+            },
+            "publishAllPorts": true           
+        }
+    },
+    "$schema": "http://json.schemastore.org/launchsettings.json",
+    "iisSettings": {
+        "windowsAuthentication": false,
+        "anonymousAuthentication": true,
+        "iisExpress": {
+            "applicationUrl": "http://localhost:64178",
+            "sslPort": 44306
+        }
     }
-  },
-  "$schema": "http://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:64178",
-      "sslPort": 44306
-    }
-  }
 }
-
-

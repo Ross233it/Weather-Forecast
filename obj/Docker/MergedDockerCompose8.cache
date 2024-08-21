@@ -1,25 +1,18 @@
 name: dockercompose599963739448213037
 services:
   weatherforecast:
-    build:
-      context: C:\C-Sharp-Projects\TrentinoWeatherForecast
-      dockerfile: WeatherForecast/Dockerfile
     container_name: WeatherForecastWebClient
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "7235"
-      ASPNETCORE_HTTPS_PORTS: "5158"
+      ASPNETCORE_HTTP_PORTS: "5000"
+      ASPNETCORE_URLS: http://+:5000
     image: weatherforecast
     networks:
       default: null
     ports:
       - mode: ingress
-        target: 5158
-        published: "1116"
-        protocol: tcp
-      - mode: ingress
-        target: 7235
-        published: "1115"
+        target: 80
+        published: "5000"
         protocol: tcp
     volumes:
       - type: bind

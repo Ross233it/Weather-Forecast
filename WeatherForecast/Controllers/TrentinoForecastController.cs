@@ -30,10 +30,10 @@ namespace WeatherForecast.Controllers{
             {
 
                 var data = await response.Content.ReadAsStringAsync();
-                _logger.LogInformation("Dati ricevuti: {data}", data);
+                //_logger.LogInformation("Dati ricevuti: {data}", data);
 
                 var deserialized = JsonSerializer.Deserialize<TrentinoForecastModel>(data, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
-                _logger.LogInformation("Dati deserializzati: {deserialized}", deserialized);
+                //_logger.LogInformation("Dati deserializzati: {deserialized}", deserialized);
                
                 return View(deserialized);                
             }
