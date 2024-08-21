@@ -1,0 +1,11 @@
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\bin\Release\net8.0\CommonClassLibrary.deps.json
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\bin\Release\net8.0\CommonClassLibrary.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\bin\Release\net8.0\CommonClassLibrary.pdb
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\CommonClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\CommonClassLibrary.AssemblyInfoInputs.cache
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\CommonClassLibrary.AssemblyInfo.cs
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\CommonClassLibrary.csproj.CoreCompileInputs.cache
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\CommonClassLibrary.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\refint\CommonClassLibrary.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\CommonClassLibrary.pdb
+C:\C-Sharp-Projects\TrentinoWeatherForecast\CommonClassLibrary\obj\Release\net8.0\ref\CommonClassLibrary.dll

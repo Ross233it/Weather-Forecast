@@ -1,0 +1,20 @@
+services:
+  weatherforecast:   
+    container_name: WeatherForecastWebClient
+    image: your_docker_registry/weatherforecast:latest
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80;https://+:443
+    ports:
+      - "80:1116"   # Porta esterna 80 mappata alla porta interna 80 del container
+      - "443:1115" # Porta esterna 443 mappata alla porta interna 443 del container  
+
+  wssoaptranslator:   
+    container_name: WeatherForecastSoapWs
+    image: ${DOCKER_REGISTRY-}wssoaptranslator
+    build:
+      context: .
+      dockerfile: WsSoapTranslator/Dockerfile
+    ports:
+        - 1118:2350
+

@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "WsSoapTranslator": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+        "commandName": "Docker",
+        "launchBrowser": true,
+        "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+        "environmentVariables": {            
+            "ASPNETCORE_HTTP_PORTS": "2350"
+        },
+        "publishAllPorts": true,                     
+    }
+  }
+}

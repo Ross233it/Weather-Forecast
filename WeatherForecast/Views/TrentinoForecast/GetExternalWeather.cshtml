@@ -1,0 +1,100 @@
+﻿@model WeatherForecast.CommonClassLibrary.Models.TrentinoForecastModel
+
+@{ 
+    ViewData["Title"] = "TRENTINO WEATHER FORECAST";
+}
+
+<div class="container">
+    <!-- Card per il titolo principale della pagina -->
+    <div class="card p-3 mb-3">
+        <h1 class="display-4">@ViewData["Title"] </h1>
+        <h2 class="mb-3"><strong>Ente Titolare:</strong>@Model.nometitolare </h2>
+        <h3 class="mb-3"><strong>Data di Pubblicazione:</strong> @Model.dataPubblicazione</h3>
+        <h4 class="mb-3">Evoluzione Generale:</h4>
+        <p>@Model.evoluzione</p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Iterazione per le previsioni -->
+    @foreach (var previsione in Model.previsione)
+    {
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title" style="color:darkred">Località: @previsione.localita</h2>
+                <h4>Quota: @previsione.quota mt.</h4>
+                @foreach (var day in previsione.giorni)
+                {
+                    <!-- Card per ogni giorno -->
+                    <div class="card mb-3" style="background-color:#f7f9fa">
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-md-2">
+                                    <img src="@day.icona" alt="Icona del giorno" class="img-fluid" />
+                                </div>
+                                <div class="col-md-2 minicard">
+                                    <h6>Previsioni per <br/> il giorno: <span style="color:darkred"> @day.giorno </span></h6>
+                                </div>
+                                <div class="col-md-2 minicard">
+                                    <p>@day.descIcona</p>
+                                </div>
+
+                                <div class="col-md-2 minicard">
+                                    <h6>Temperatura <br/> Minima: @day.tMinGiorno °C</h6>
+                                </div>
+                                <div class="col-md-2 minicard">
+                                    <h6>Temperatura <br/> Massima: @day.tMaxGiorno °C</h6>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <h6><strong>Previsione generale:</strong></h6>
+                                    <p>@day.testoGiorno</p>
+                                </div>
+                            </div>
+
+                            @if (day.fasce != null && day.fasce.Any())
+                            {
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Fascia oraria</th>
+                                                    <th>Orario</th>
+                                                    <th>Probabilità <br />precipitazioni</th>
+                                                    <th>Probabilità <br />temporali</th>
+                                                    <th>Vento <br/> in quota</th>
+                                                    <th>Direzione</th>
+                                                    <th>Forza</th>                                                                                                                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var fascia in day.fasce)
+                                                {
+                                                    <tr>
+                                                        <td><img width="50" src="@fascia.icona" alt="Icona Fascia" /></td>
+                                                        <td>@fascia.fasciaPer</td>
+                                                        <td>@fascia.fasciaOre</td>
+                                                        <td>@fascia.descPrecProb </td>                                                    
+                                                        <td>@fascia.descTempProb </td>
+                                                        <td><img width="50" src="@fascia.iconaVentoQuota" alt="Vento in quota" /></td>
+                                                        <td>@fascia.descVentoDirQuota</td>
+                                                        <td>@fascia.descVentoIntQuota</td>                                              
+                                                        
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>

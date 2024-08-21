@@ -1,0 +1,16 @@
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\WsSoapTranslator.deps.json
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\WsSoapTranslator.runtimeconfig.json
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\WsSoapTranslator.exe
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\WsSoapTranslator.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\CommonClassLibrary.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\SoapCore.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\System.ServiceModel.Primitives.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\Newtonsoft.Json.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\System.CodeDom.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\System.ServiceModel.Http.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\System.Private.ServiceModel.dll
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\WsSoapTranslator.pdb
+C:\C-Sharp-Projects\TrentinoWeatherForecast\bin\Release\CommonClassLibrary.pdb
+C:\C-Sharp-Projects\TrentinoWeatherForecast\obj\Release\docker-compose.dcproj.AssemblyReference.cache
+C:\C-Sharp-Projects\TrentinoWeatherForecast\obj\Release\docker-compose.dcproj.CoreCompileInputs.cache
+C:\C-Sharp-Projects\TrentinoWeatherForecast\obj\Release\docker-c.35A3FFBA.Up2Date

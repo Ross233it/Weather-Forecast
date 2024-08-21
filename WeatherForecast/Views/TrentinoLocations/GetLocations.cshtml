@@ -1,0 +1,26 @@
+﻿@model WeatherForecast.CommonClassLibrary.Models.TrentinoLocations
+@{   
+    ViewData["Title"] = "LOCALITA DEL TRENTINO";
+}
+
+<div class="container">
+    <!-- Card per il titolo principale della pagina -->
+    <div class="card p-3 mb-3">
+        <h1 class="display-4">@ViewData["Title"] </h1>      
+        <h3 class="mb-3"><strong>Elenco località disponibili</strong></h3>
+        <h4 class="mb-3">Clicca per visualizzare le previsioni meteo</h4>        
+    </div>
+</div>
+
+<div class="container">
+       <!-- Iterazione per le localita -->
+  @foreach (var location in Model.Locations)
+   {
+       <div class="card mb-3">
+           <div class="card-body">
+                <h6 class="card-title">Località: <a href="/trentino-forecast?location=@location.Localita" target="_blank"> @location.Localita</a></h6>
+           </div>
+       </div>
+   }
+ 
+</div>

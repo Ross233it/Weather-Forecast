@@ -1,0 +1,60 @@
+name: dockercompose599963739448213037
+services:
+  weatherforecast:
+    build:
+      context: C:\C-Sharp-Projects\TrentinoWeatherForecast
+      dockerfile: WeatherForecast/Dockerfile
+    container_name: WeatherForecastWebClient
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "1116"
+      ASPNETCORE_HTTPS_PORTS: "1115"
+      ASPNETCORE_URLS: https://+:1115;http://+:1116
+    image: weatherforecast
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "1116"
+        protocol: tcp
+      - mode: ingress
+        target: 430
+        published: "1115"
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        published: "1115"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Intel\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Intel\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  wssoaptranslator:
+    build:
+      context: C:\C-Sharp-Projects\TrentinoWeatherForecast
+      dockerfile: WsSoapTranslator/Dockerfile
+    container_name: WeatherForecastSoapWs
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "2350"
+    image: wssoaptranslator
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 2350
+        published: "1118"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose599963739448213037_default
