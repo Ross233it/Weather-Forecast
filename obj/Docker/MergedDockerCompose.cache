@@ -4,21 +4,12 @@ services:
     container_name: WeatherForecastWebClient
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "1116"
-      ASPNETCORE_HTTPS_PORTS: "1115"
-      ASPNETCORE_URLS: https://+:1115;http://+:1116
+      ASPNETCORE_HTTP_PORTS: "80"
+      ASPNETCORE_URLS: http://+:80
     image: weatherforecast
     networks:
       default: null
     ports:
-      - mode: ingress
-        target: 80
-        published: "5000"
-        protocol: tcp
-      - mode: ingress
-        target: 443
-        published: "1115"
-        protocol: tcp
       - mode: ingress
         target: 80
         published: "1116"

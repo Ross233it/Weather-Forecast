@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CommonClassLibrary\CommonClassLibrary.csproj" />
-    <ProjectReference Include="..\WsSoapTranslator\WsSoapTranslator.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -5,6 +5,7 @@ using CommonClassLibrary.Models;
 namespace WeatherForecast.CommonClassLibrary.Models
 {
     public class TrentinoLocations{
+
                 [JsonPropertyName("localita")]
                 public Location[] Locations { get; set; }
     }
